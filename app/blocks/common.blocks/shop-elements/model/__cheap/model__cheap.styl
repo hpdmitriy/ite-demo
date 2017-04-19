@@ -1,0 +1,14 @@
+&__cheap
+  text-align: center
+  padding-top: 0 !important
+  position: relative
+  z-index:1;
+  display: none
+  ^[0]:hover &
+      display: block
+  &:before
+    position: absolute 8px 0 auto 0
+    content ''
+    height 1px
+    bg #d1d1d1
+    z-index: -1

@@ -1,0 +1,27 @@
+.pattern
+  @import "_paralax/pattern_paralax"
+  @import "_figure/pattern_figure"
+  @import "_label/pattern_label"
+  @import "_empty/pattern_empty"
+  @import "_bage/pattern_bage"
+  @import "_features/pattern_features"
+
+/* WP TODO Woocommerce crutch:  Category Paralax
+   ========================================================================== */
+
+body
+  &.woocommerce
+    .category__set
+      .pattern_paralax
+        lost-masonry-column: 1/2 40px flex;
+        &:nth-child(even)
+          margin-top: 55px
+        &:nth-child(odd)
+          margin-top: 25px
+      +mq-max('md')
+        lost-masonry-wrap: no-flex 0px;
+        .pattern_paralax
+          lost-masonry-column: 1/1 0px no-flex;
+          margin-top: 0px !important
+          margin-bottom: 50px
+

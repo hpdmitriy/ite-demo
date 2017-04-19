@@ -1,0 +1,49 @@
+&__decor
+  width 100%
+  position: fixed 0 0 auto auto
+  overflow hidden
+  z-index -1
+  #mainPageDecor
+    width auto
+    height 100vh
+    min-height 574px
+    position absolute
+    left: 50%
+    *[id^='polygon']
+      opacity 0
+      fill $tr
+    #neuralMesh
+      path, circle
+        fill $wt
+    +mq-max-orient('hd', landscape)
+      width auto
+      height 115vh
+      right 0
+      top -2.5em
+      left auto
+      transform translateX(0)
+    +mq-min-orient('hd', landscape)
+      width 100vw
+      height auto
+      transform translateX(-50%)
+    +mq-min-orient('xs', portrait)
+      width auto
+      height 115vh
+      position: absolute
+      right 0
+      top -2.5em
+      transform translateX(0)
+      left auto
+    #neurons
+      > *
+        fill $wt
+    #polygons
+      > *
+        fill rgba(#fff, 0)
+        transition: all 500ms ease-in-sine
+        &.highlight
+          fill rgba(#fff, 0.5)
+  #map
+    width 100vw
+    height 100vw
+    position: absolute 0 0 0 0

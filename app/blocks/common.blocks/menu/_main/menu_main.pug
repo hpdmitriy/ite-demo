@@ -1,0 +1,31 @@
+.menu.menu_main.inline-align.inline-align_right
+	.menu-section.menu_main__logo
+		a.link.link_image(href="/")
+			-//svg.symbol__logo-ico
+				-//use(xlink:href='/styles/symbol-sprite.svg#logo-ico')
+			img.image_logo(alt="" src=paths.img+'logo.svg')
+
+	.menu-section.menu_touch
+		include ../../../touch.blocks/buttons/_menu-open/button_menu-open
+
+		.menu_touch__links
+			span.menu-item.box_block-md
+				a.link(href="/mi.html")
+					span Мы.
+			span.menu-item.box_block-md
+				a.link(href="/development.html")
+					span Услуги.
+			span.menu-item.box_block-md
+				a.link(href="/portfolio.html")
+					span Проекты.
+			span.menu-item.box_block-md
+				a.link(href="/clients.html")
+					span Клиенты.
+			span.menu-item.box_block-md
+				a.link(href="/contacts.html")
+					span Контакты.
+
+	.menu-section.menu_main__callback
+		a.link.link_phone.form__show(data-target-form="form_callback", href="#")
+			i.fa.fa-phone
+			span Получить консультацию

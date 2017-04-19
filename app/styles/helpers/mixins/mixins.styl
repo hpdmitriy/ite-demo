@@ -1,0 +1,52 @@
+/*@media screen and (orientation: landscape), all and (min-width: 480px) {
+  #logo { background: url(logo1.png) no-repeat; }
+}
+@media screen and (orientation: portrait) {
+  #logo { background: url(logo2.png) no-repeat; }
+}*/
+
+/* Media queries
+   ========================================================================== */
+
+
+mq-min-orient($from, $orient)
+  @media only screen and (min-width: $breakpoints[$from]) and (orientation: $orient)
+  	{block}
+
+mq-max-orient($to, $orient)
+  @media only screen and (max-width: $breakpoints[$to] - 1) and (orientation: $orient)
+  	{block}
+
+mq-min($from)
+  @media only screen and (min-width $breakpoints[$from])
+  	{block}
+
+mq-max($to)
+  @media only screen and (max-width $breakpoints[$to] - 1)
+  	{block}
+
+mq-min-max($from, $to)
+  @media only screen and (min-width $breakpoints[$from]) and (max-width $breakpoints[$to] - 1)
+  	{block}
+
+link-styles($cl = $lc1, $td = underline, $clh = $lh1, $tdh = false)
+  color: $cl
+  text-decoration: $td
+  &:hover
+    if $tdh
+      text-decoration: $td
+    color: $clh
+
+button-colors(bgc = lightness($mc, 70), col = $mc, bcl = lightness($mc, 70))
+  color col
+  background bgc
+  border-color bcl
+  &:focus, &:hover
+    background darken(bgc,10)
+
+
+/* pools
+   ========================================================================== */
+pool($location = none, $top = 0, $right = 0, $bottom = 0, $left = 0)
+  float $location
+  margin $top $right $bottom $left

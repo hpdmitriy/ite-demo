@@ -1,0 +1,133 @@
+&__title
+  position: relative
+  min-height 14em
+  width: 100%
+  padding 2em 0em 0 2em
+  z-index 1
+  +mq-max-orient('md', portrait)
+    min-height 25em
+    padding-top: 3em
+
+  //+mq-max('md')
+  //  padding 7% 4% 2% 4%
+
+  &_stroke
+    position: absolute 0 auto auto 0
+    height 14em
+    width  14em
+    z-index -1
+    +mq-max-orient('md', portrait)
+      width  18em
+      height 25em
+    > #quadrate
+      display: block
+      +mq-max-orient('md', portrait)
+        display: none
+      > polyline
+        display none
+        stroke-dasharray: 1850;
+        stroke-dashoffset: 1850;
+        animation: dash 3s linear forwards;
+        stroke-width: 8px
+    > #rectangle
+      display none
+      +mq-max-orient('md', portrait)
+        display: block
+      > polyline
+        display none
+        stroke-dasharray: 2050;
+        stroke-dashoffset: 2050;
+        animation: dash 3s linear forwards;
+        stroke-width: 8px
+
+  &_page
+    //padding 35px 0px 35px 70px
+    width auto
+    margin-left: 3.5em
+    padding 2em 4em 0 2em
+    min-height 10em
+    +mq-max-orient('md', landscape)
+      margin-left 0
+    +mq-max-orient('md', portrait)
+      margin-left: 0
+      min-height 10em
+      padding-right: 0
+    //  min-height 250px
+    //  padding 25px 0px 25px 50px
+    //+mq-max('sm')
+    //  min-height 180px
+    //  padding 20px 0px 20px 25px
+    //  margin-left: 0
+
+    .caption_page
+      height 2em
+      line-height 1.5em
+      position: relative
+      //+mq-max('md')
+      //  height 180px
+      //  line-height: 170px
+      //+mq-max('md')
+      //  height 140px
+      //  line-height: 130px
+      span
+        display: inline-block
+        font-size: 0.62em
+        text-transform: none
+        ff $medium
+        letter-spacing normal
+        line-height 1em
+        height auto
+        vertical-align: middle
+        +mq-max-orient('md', portrait)
+          letter-spacing -0.02em
+        //position absolute 50% 0 auto 0
+        //transform translate(0%,-1.7em);
+        //+mq-max('md')
+        //  font-size: responsive 35px 40px;
+        //  font-range: $breakpoints.sm $breakpoints.md;
+        //+mq-max('sm')
+        //  font-size: responsive 22px 30px;
+        //  font-range: $breakpoints.xs $breakpoints.sm;
+    #quadrate
+      polyline
+        stroke-width: 10px
+      +mq-max('md')
+        display: block
+
+
+    .section__title_stroke
+      height 10em
+      width 10em
+      z-index -1
+      +mq-max-orient('md', portrait)
+        height 10em
+        width 10em
+  &.title_page_dev
+    min-height 7em
+    padding-top: 1.2em
+    .caption_page
+      height 1.5em
+      line-height 1em
+    #quadrate
+      polyline
+        stroke-width: 15px
+      +mq-max('md')
+        display: block
+
+
+    .section__title_stroke
+      height 7em
+      width 7em
+      z-index -1
+      +mq-max-orient('md', portrait)
+        height 7em
+        width 7em
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1850;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}

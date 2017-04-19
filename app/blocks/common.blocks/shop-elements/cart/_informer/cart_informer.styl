@@ -1,0 +1,115 @@
+&-informer
+  margin-top: 30px
+  margin-right 10px
+  height 70px
+  //overflow hidden
+  padding 0
+  border-width 2px 0 2px 7px
+  border-color $c5
+  border-style solid
+  > *
+    lost-row 1 0
+  +mq-max('sm')
+    padding 0
+    margin 0px
+    size 50px
+    float right
+    border none
+  //inline-big-flag-ico(false, "ffb925")
+  //background-position: top right;
+  //background-size: cover
+  &__icon
+    lost-column 2 / 10 3 0
+    background: $wt
+    text-align: center
+    &:before
+      content: ""
+      display: inline-block
+      min-height: inherit
+      height: 100%
+      vertical-align: middle;
+    > .picto
+      vertical-align: middle
+    +mq-max('sm')
+      display: none
+  &__info
+    lost-column 5 / 10 3 0
+    background: $wt
+    padding-top: 15px
+    fs 13px
+    > span
+      font-size: responsive 11px 13px;
+      font-range: 992px 1280px;
+      display: block
+      > b
+        white-space nowrap
+    +mq-max('sm')
+      display: none
+
+  &__button
+    lost-column 3 / 10 3 0
+    padding-top: 22px
+    text-align: center
+    background $c5
+    +mq-max('sm')
+      background: $tr
+      border none
+      height 1px
+      margin: 0
+      padding: 0
+    &:before
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 35px 0 35px 15px;
+      border-color: transparent transparent transparent $c5;
+      content: ''
+      position: absolute -1px -15px auto auto
+      +mq-max('sm')
+        display: none
+
+
+    > .button
+      padding 0
+      fs 11px
+      input-colors($c5, $wt, $c5)
+      .picto
+        vertical-align: middle
+      +mq-min('sm')
+        .picto
+          display: none
+      +mq-max('sm')
+        margin: 0
+        padding: 0
+        background: #2d2d2d
+        border: none
+        border-radius 0
+        size 50px
+        lh 60px
+        position: relative
+        top -80px
+        right -30px
+        &:before
+          background: #2d2d2d
+          position: absolute 10px 13px auto auto
+          size 17px
+          border-radius 50%
+          border none
+          content attr(data-count)
+          ff $cond
+          text: $wt 400 center uppercase 16px 17px normal;
+          //.section {
+          //  color: dimgrey;
+          //  font-weight: 700;
+          //  text-align: center;
+          //  text-transform: uppercase;
+          //  font-size: 1.25em;
+          //  line-height: 1.5;
+          //  letter-spacing: .05em;
+          //}
+        span
+          display: none
+      &:hover, &:focus
+        background: $c5 !important
+        +mq-max('sm')
+          background: #2d2d2d !important

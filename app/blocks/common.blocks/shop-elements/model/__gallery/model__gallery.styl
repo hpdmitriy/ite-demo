@@ -1,0 +1,37 @@
+&__gallery
+  lost-column: 1/2 2 2vw;
+  +mq-min('md')
+    lost-move 1/2
+  +mq-max(md)
+    display: block !important
+    width 100% !important
+    float: none !important
+    margin 0 0 30px 0 !important
+    clear fix
+  & + .model__characteristic
+    > .property
+      margin-bottom: 20px
+    +mq-min-max('sm','md')
+      margin-bottom: 0 !important
+      > .property
+        lost-column 1/2 2 30px
+        margin-bottom: 0
+
+
+
+
+/* TODO костыли для галереи */
+.lSPager.lSGallery
+    > li
+      text-align: right !important
+      img
+        display: inline-block !important
+        border solid 1px $tr
+      &.active
+        img
+          border solid 1px $c5
+
+.gallery.lightSlider
+  li
+    img
+      width 100%

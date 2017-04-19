@@ -1,0 +1,24 @@
+.inline-align
+  display: block;
+  line-height: 0;
+  &:after
+    width: 100%;
+    height: 0px;
+    visibility: hidden;
+    overflow: hidden;
+    content: "";
+    display: inline-block;
+    line-height 1px
+    background red
+  & > *
+    display inline-block;
+    vertical-align: middle
+    line-height: normal;
+  &_right
+    text-align: right
+  &_left
+    text-align: left
+  &_center
+    text-align: center
+  &_justify
+    text-align: justify

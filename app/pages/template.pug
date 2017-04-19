@@ -1,0 +1,47 @@
+include helpers/variables.pug
+include helpers/mixins.pug
+include ../../node_modules/bemto.jade/bemto
+-//include ../../node_modules/bem-jade/bem.jade
+doctype html
+html(lang="ru")
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+
+		meta(name='viewport', content='width=device-width,initial-scale=1')
+		meta(name='format-detection', content='telephone=no')
+		meta(property='og:locale', content='ru_RU')
+		meta(property='og:title', content='ITEgroup')
+		meta(property='og:description', content='ITEgroup')
+		meta(property='og:url', content='http://itegroup.ru/')
+		meta(property='og:image', content='http://itegroup.ru/images/template/logo.png')
+		meta(property='og:type', content='website')
+		meta(property='og:site_name', content='ITEgroup')
+		block metaTags
+		="\n"
+		include ../../public/favicons/icons.html
+
+		block css
+
+		// for IE
+		<!--[if lt IE 9]>
+			script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
+			script(src='http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js')
+		<![endif]-->
+
+
+	body(class="fadeIn "+pageId, id=(pageId == 'portfolio')? 'total': pageId)
+		block loader
+
+		#Page.page.grid
+
+
+			block header
+			if pageId == 'contacts'
+				#map
+			main.page__object
+				block content
+			block footer
+
+		block pageScripts
+

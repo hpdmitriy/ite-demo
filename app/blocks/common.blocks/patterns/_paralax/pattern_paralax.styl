@@ -1,0 +1,30 @@
+&_paralax
+  position: relative
+  cursor: pointer
+
+  &:hover
+    > .paralax__description
+      opacity 1;
+      > span
+        margin-left: 0
+        opacity 1;
+    > .paralax__title
+      color red
+  //+mq-min('md')
+  //  &:nth-child(1), &:nth-child(2)
+  //    .image_paralax
+  //      top 10% !important
+  //  &:nth-child(3), &:nth-child(4)
+  //    .image_paralax
+  //      top -20% !important
+  //  &:nth-child(5), &:nth-child(6)
+  //    .image_paralax
+  //      top -50% !important
+  //  &:nth-child(7), &:nth-child(8)
+  //    .image_paralax
+  //      top -80% !important
+.paralax
+  @import "__image/paralax__image"
+  @import "__description/paralax__description"
+  @import "__title/paralax__title"
+

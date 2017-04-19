@@ -1,0 +1,31 @@
+extends template
+
+block metaTags
+  - var pageId = 'index';
+
+  title #{meta.title}
+  meta(name='description', content=meta.desc)
+  meta(name='keywords', content=meta.desc)
+
+append css
+  script(src=paths.js + 'progress.js')
+  link(rel='stylesheet' href=paths.css + 'vendor.css')
+  link(rel='stylesheet' href=paths.css + 'index.css')
+  link(rel='stylesheet' href=paths.css + 'common.css')
+
+
+block loader
+  include ../blocks/common.blocks/page/__decor/page__decor_new
+block header
+  include ../blocks/common.blocks/header/header
+block content
+  include ../blocks/common.blocks/sections/_content/section_content
+  include ../blocks/common.blocks/slider/slider
+
+block footer
+  include ../blocks/common.blocks/footer/footer
+append pageScripts
+  script(src=paths.js + 'index.js')
+  script(src=paths.js + 'common.js')
+
+

@@ -1,0 +1,105 @@
+html
+  text-size-adjust 100%
+  min-height 100%
+
+body
+  h: 100%;
+  min-width 360px
+  display: block;
+  visibility: visible;
+  animation-duration: 1.5s
+  font-smoothing: subpixel-antialiased !important;
+  backface-visibility: hidden;
+  background $tr url($ipath 'index_bg.png') 0 50% no-repeat
+  background-size cover
+  background-attachment fixed
+  &.mi
+    background: #e1eec3;
+    background: -moz-linear-gradient(top, #e1eec3 0%, #c4eee0 100%);
+    background: -webkit-linear-gradient(top, #e1eec3 0%,#c4eee0 100%);
+    background: linear-gradient(to bottom, #e1eec3 0%,#c4eee0 100%);
+  &.dev, &.support, &.seo
+    background: #d4dde5;
+    background: -moz-linear-gradient(top, #d4dde5 0%, #83d1cb 100%);
+    background: -webkit-linear-gradient(top, #d4dde5 0%,#83d1cb 100%);
+    background: linear-gradient(to bottom, #d4dde5 0%,#83d1cb 100%);
+  &#total
+    background $tr url($ipath 'total-fon.jpg') 50% 50% no-repeat
+    background-size cover
+    background-attachment fixed
+  &#clients
+    background $tr url($ipath 'clients-fon.png') 50% 50% no-repeat
+    background-size cover
+    background-attachment fixed
+  &#rubli
+    background $tr url($ipath 'rubli-fon.jpg') 50% 50% no-repeat
+    background-size cover
+    background-attachment fixed
+  &#kaspersky
+    background $tr url($ipath 'kaspersky-fon.jpg') 50% 50% no-repeat
+    background-size cover
+    background-attachment fixed
+  &#liga
+    background $tr url($ipath 'liga-fon.jpg') 50% 50% no-repeat
+    background-size cover
+    background-attachment fixed
+  &#offpoly
+    background $tr url($ipath 'offpoly-fon.jpg') 50% 50% no-repeat
+    background-size cover
+    background-attachment fixed
+  &#sm
+    background $tr url($ipath 'sm-fon.jpg') 50% 50% no-repeat
+    background-size cover
+    background-attachment fixed
+  &#expo
+    background $tr url($ipath 'expo-fon.jpg') 50% 50% no-repeat
+    background-size cover
+    background-attachment fixed
+  &.over, &.menu_open
+    &:before
+      overflow: hidden;
+      position: fixed 0 0 0 0;
+      background: rgba(#2d2d2d, 0.3)
+      content: ''
+      z-index 10
+  &.contacts
+    +mq-min-orient('xs',portrait)
+      .page__object
+        position fixed 7em auto auto 50%
+        transform: translate3d(-50%, 0, 0);
+//@import "__loader/page__loader"
+
+.page
+  position: relative
+  //z-index 1
+  //min-height: 100vh
+  font-size 1em
+  @import "__decor/page__decor"
+  @import "__object/page__object"
+
+#map
+  opacity 0
+  position: fixed 4.2em 0 0 0
+  .ymaps-map.ymaps-i-ua_js_yes
+    height 100% !important
+  .ymaps-b-zoom
+    visibility hidden !important
+  .ymaps-image-with-content
+    background-size contain !important;
+    width 3em !important
+    height 4em !important
+    left: -1.5em !important
+    top:-4em !important
+    background-repeat no-repeat !important
+
+
+
+animations = (fadeIn fadeOut slideInDown bounceInDown)
+
+.animated
+  animation-duration: 1s
+  animation-fill-mode: both
+
+for animation_name in animations
+  .{animation_name}
+    animation-name: animation_name

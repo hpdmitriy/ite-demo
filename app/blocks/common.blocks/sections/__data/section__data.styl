@@ -1,0 +1,59 @@
+&__data
+  opacity 0
+  margin-top: 2em
+  padding-left: 8em
+  padding-right: 8em
+  +mq-max-orient('md', landscape)
+    padding-left: 0em
+    padding-right: 0em
+
+  +mq-max-orient('md', portrait)
+    padding-left: 1.5em
+    padding-right: 1.5em
+    margin-top: 3.5em
+  //+mq-max('md')
+  //  margin-top: 70px
+  //+mq-max('sm')
+  //  margin-top: 40px
+  //  padding 0
+  ul
+    padding: 0
+    list-style none
+    font-size 1em
+    margin 0
+    +mq-max-orient('md', portrait)
+
+      font-size: 1.2em
+    > li
+      display: block
+      position: relative
+      line-height 1.2
+      padding-left: 1.8em
+      margin-bottom: 1.5em
+      +mq-max-orient('md', portrait)
+        margin-bottom: 2em
+      &:last-child
+        margin-bottom: 0
+      +mq-max('sm')
+        //font-size: responsive 18px 24px;
+        //font-range: $breakpoints.xs $breakpoints.md;
+        //padding-left: 25px
+      &:before
+        display: block
+        content ""
+        position: absolute 0.5em auto auto 0
+        size 0.32em
+        background: #312d39
+  &_service
+    margin-top: 1.5em
+    padding-left: 6em
+    padding-right: 5em
+    +mq-max-orient('md', portrait)
+      padding-left: 3em
+      padding-right: 3em
+    +mq-max-orient('md', landscape)
+      padding-left: 0em
+      padding-right: 0em
+    ul
+      li
+        margin-bottom: 1em

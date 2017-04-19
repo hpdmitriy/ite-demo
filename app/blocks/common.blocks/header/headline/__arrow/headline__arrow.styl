@@ -1,0 +1,24 @@
+&__arrow
+  position: absolute
+  bottom 100px
+  left 50%
+  margin-left: -37px
+  .symbol__arrow-down-ico
+    &.cl_green
+        fill $c3
+    &.cl_gray
+        fill #495057
+  +mq-max('md')
+    margin-left: -28px
+    bottom 90px
+    .symbol__arrow-down-ico
+      viewbox: 0 0 59px 64px
+      width: 59px
+      height: 64px
+  +mq-max('sm')
+    margin-left: -23px
+    bottom 53px
+    .symbol__arrow-down-ico
+      viewbox: 0 0 47px 49px
+      width: 47px
+      height: 49px

@@ -1,0 +1,19 @@
+.image
+  &_responsive
+    max-width: 100%
+    display: inline-block
+    height: auto
+  &_fluid
+    width 100%
+    height: auto
+    display: block
+  &_paralax
+    display: block
+    width 100%
+    height auto
+    position absolute
+    left: 0
+    //top -50%
+    +mq-max('md')
+      //bottom auto
+      //top -50%

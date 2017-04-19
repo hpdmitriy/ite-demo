@@ -1,0 +1,9 @@
+.menu
+    @import "_touch/menu_touch"
+    //@import "_touch/menu_touch-phones"
+body.menu_open
+    +mq-max('sm')
+        .nav_main
+           // background: $tr
+        .button_menu-open:not(.menu_open), .header-page_info
+            display: none

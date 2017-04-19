@@ -1,0 +1,48 @@
+&__price
+  position:absolute 210px auto auto 0px
+  z-index 11
+  b
+    display: inline-block
+    position: relative
+    height 64px
+    width auto
+    padding-left: 40px
+    padding-right: 30px
+    line-height: 64px
+    font-size: responsive 35px 50px;
+    font-range: 320px 1280px;
+    font-family: $medium
+    color: $wt
+    font-weight: normal
+    text-transform: uppercase;
+    background-color rgba(255, 255, 255, 0.3)
+    &:before
+      transition: all 250ms ease-in-cubic;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 32px 0 32px 18px;
+      border-color: transparent transparent transparent rgba(255, 255, 255, 0.3);
+      position absolute 0 auto 0 100%
+      content ""
+  i
+    display: inline-block
+    font-size: responsive 18px 22px;
+    font-range: 320px 1280px;
+    margin-left: 40px
+    font-family: $medium
+    color: $wt
+    font-weight: normal
+    line-height: 1.2;
+    font-style: normal
+    position: relative
+    top -10px
+    &:before
+      content ""
+      display: block
+      width: 80%
+      height: 2px
+      background: #e34c3e
+      position: absolute 50% 10% auto auto
+      transform rotate(-45deg)
+

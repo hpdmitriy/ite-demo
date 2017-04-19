@@ -1,0 +1,21 @@
+&_bage
+  display: inline-block
+  position: relative
+  .bage
+    &__title
+      color #14b2cf
+      font-family $light
+      font-size 108px;
+      text-transform uppercase
+      line-height: 1
+      +mq-max('sm')
+        text-align: center
+    &__info
+      color #14b2cf
+      font-family $book
+      font-size 28px
+      lh 32px
+      +mq-max('sm')
+        text-align: center
+        > br
+          display: none

@@ -1,0 +1,59 @@
+&_add
+  color #fefefe
+  ff $bold
+  fs 12px
+  text-transform uppercase
+  bg $c5
+  &:hover
+    bg darken($c5,20)
+  &_red
+    padding-left: 11px
+    padding-right: 11px
+    bg $c6
+    text-transform: none
+    border-radius 0px
+    &:hover
+      bg darken($c6,20)
+  &_model
+    width: 100%
+    cursor: pointer
+    display: block
+    height: 58px
+    border none
+    color black
+    font-family $black
+    font-size 16px
+    text-transform uppercase
+    bg $wt
+    padding-left: 15px
+    border-radius 0px
+    text-align: left
+    letter-spacing -0.05em
+    line-height 58px !important
+    white-space: nowrap
+    +mq-max('sm')
+      position: relative
+      padding-right: 20px !important
+    +mq-max('md')
+      width auto
+      display: inline-block
+      padding-right: 50px
+      letter-spacing normal
+    > .picto
+      top 10px !important
+      margin-right: 10px !important
+    &:hover
+      bg $wt
+      color $c5
+    &:before
+      content ''
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 29px 13px 29px 13px;
+      border-color: $c5 $c5 $c5 $wt;
+      position: absolute 0 -13px auto auto
+      z-index 10
+      +mq-max('sm')
+        right -26px
+

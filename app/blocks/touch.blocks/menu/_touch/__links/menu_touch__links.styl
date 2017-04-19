@@ -1,0 +1,95 @@
+&__links
+  padding: .4em 0.5em 0 0
+  white-space nowrap
+  .menu-item
+    padding: 0 .7em
+    +mq-min-max('md','lg')
+      padding: 0 .2em
+      > .link
+        letter-spacing -0.05em
+
+
+    > .link
+      display: inline-block
+      width auto
+      ff $book
+      color: $wt
+      font-size: 1em;
+      //line-height: 3.5em;
+      text-decoration: none
+
+      li
+      &_icon
+        background #e9e8e6
+        border-radius 5px
+        color #322f3a
+        ff $medium
+        padding-left: 2em !important
+        letter-spacing -0.002em
+      &:hover, &.current
+        text-shadow: 0 0 .65px $wt, 0 0 .65px $wt;
+      span
+        margin auto
+      /*
+      +mq-min-max('md', 'lg')
+        padding-left: 10px
+        padding-right: 10px
+        font-size: responsive 14px 16px;
+        font-range: 992px 1199px;
+      */
+  +mq-max('md')
+    opacity 0;
+    //display: none !important
+    margin-top: 0
+    position: fixed !important;
+    float: none !important
+    z-index: -1;
+    width: 230px !important;
+    right 0px
+    top -17em
+    bottom auto
+    height auto
+    background: #322f3a !important;
+    padding: 1em 1.5em 0 3em;
+    //transform: translate3d(0,0,0);
+    transition: top 250ms ease-in-cubic;
+    .menu-item
+      text-align: left
+      //min-height 30px
+      color #e9e8e6
+      line-height: 1 !important
+      margin 0 !important
+      padding: 1em 0 !important;
+      &:last-child
+        //display: none
+      > .link
+        color: #e9e8e6
+        width 100%
+        font-size 1.5em
+
+
+&.menu_open
+  .menu_touch__links
+    opacity 1
+    +mq-max('md')
+      display: block !important
+      //transform: translate3d(0,0,0);
+      top: 4em
+      transition: top 500ms ease-in-cubic;
+      .button_menu-open
+        left 0
+//> i
+//  @extend .picto_close-menu-picto
+
+/*
+
+.button_menu-open
+  display: none
+  +mq-max('md')
+    display: block
+    top:0
+    right -80px
+    position: absolute
+  +mq-max('sm')
+    size 50px
+    right -70px  */

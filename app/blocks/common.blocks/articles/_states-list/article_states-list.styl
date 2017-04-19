@@ -1,0 +1,23 @@
+&_states-list
+  padding-bottom: 40px
+  position: relative
+  +mq-max('md')
+    display: none
+    & + .spacer
+      display: none
+  .button
+    position: absolute 30px 10px auto auto
+    +mq-max('sm')
+      top 0
+
+  .h3
+    margin-bottom: 30px
+
+  .link
+    color $lc2
+    &:hover
+      color: $lc1
+
+  .preview__title
+    margin-bottom: 20px;
+    line-height: 1.3;

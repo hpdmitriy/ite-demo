@@ -1,0 +1,18 @@
+&_equipment
+  display: block
+  margin-bottom: 70px
+  .section__set
+    lost-masonry-wrap: flex 20px;
+    +mq-max('sm')
+      lost-masonry-wrap: no-flex 0px;
+    > *
+      lost-masonry-column: 1/4 20px flex;
+      margin-bottom: 20px
+      +mq-max('md')
+        lost-masonry-column: 1/3 14px flex;
+        margin-bottom: 14px
+        &.pattern_empty
+          display: none
+      +mq-max('sm')
+        lost-column: 1/1 0 no-flex;
+        margin: 0 0 5px 0 !important

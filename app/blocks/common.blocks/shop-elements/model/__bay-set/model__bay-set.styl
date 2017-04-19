@@ -1,0 +1,48 @@
+&__bay-set
+  width 50%
+  lost-utility clearfix
+  bg $c5
+  padding 15px 15px 15px 40px
+  position: relative
+  margin-bottom: 120px
+  +mq-max('sm')
+    padding-left: 10px
+    padding-right: 10px
+    right 0
+  &:before
+    display: block
+    position: absolute auto -100% -70px 0
+    height 1px
+    background #e0e0e0
+    content ''
+    +mq-max('md')
+      right 0
+  +mq-max('md')
+    width 100%
+
+  .model__price
+    lost-column 2 / 5 2 10px
+    color #fefefe
+    font-family $bold
+    font-size 30px
+    line-height: 1.9em
+    +mq-max('sm')
+      display: block !important
+      width 100% !important
+      float: none !important
+      margin 0 0 15px 0 !important
+      text-align: center
+      clear fix
+  .model__bay
+    lost-column 3 / 5 2 10px
+    position: relative
+    overflow hidden
+    +mq-max('md')
+      text-align: right
+    +mq-max('sm')
+      display: block !important
+      width 100% !important
+      float: none !important
+      margin 0 0 0 0 !important
+      clear fix
+      text-align: center

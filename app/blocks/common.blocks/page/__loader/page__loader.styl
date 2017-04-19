@@ -1,0 +1,56 @@
+@import "../../../../styles/helpers/variables"
+body
+  &.loading
+    overflow hidden;
+    .page
+      visibility hidden;
+    footer
+      visibility hidden;
+    .progressjs-container
+      display: block !important;
+      opacity: 1 !important;
+
+.progressjs-container
+  background #e8e7e4;
+  transition all 0.2s ease-out;
+  position: fixed 0 0 0 0
+  z-index 9999
+  opacity 0;
+  display: none
+
+.progressjs-inner
+  width 0
+
+.progressjs-progress
+  z-index 9999999
+
+  .progressjs-inner
+    background transparent url('ite-logo.svg') 0 0 no-repeat
+    background-size: contain
+    height 130px
+    width 100% !important
+    max-width 410px
+    position absolute
+    top 50%
+    left 50%
+    margin-left -205px
+    margin-top -65px
+    transition all 0.3s ease-out
+    &:before
+      background rgba(232, 231, 228, 0.7)
+      height 93px
+      position absolute 0 0 auto 0
+      transition all 1s ease-out
+      opacity 0
+      content ''
+    &.l100pr
+      &:before
+        opacity 1
+  &.progressjs-end
+    opacity 0 !important
+  .progressjs-percent
+    display block
+    margin-top 110px
+    font-size 18px
+    width 93px
+    text-align center

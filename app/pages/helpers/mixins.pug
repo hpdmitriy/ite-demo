@@ -1,0 +1,124 @@
+mixin getModel
+  +b.model.grid__cell
+    +e.wrap
+      +e.image
+        +b.IMG.image_fluid(src='/images/models/model1.jpg')
+        +b.A.button_quick-view(href="#")
+          +b.I.picto_quickview-picto
+          | Быстрый просмотр
+
+      +e.title
+        +b.A.link_model(href="#") Cборная cауна <br>evolve ЕЛЬ
+      +e.descr
+        ul
+          li
+            span Размер, см:
+            |  118 х 118
+          li
+            span Рек. мощ. кВт:
+            | 4,5
+      +e.price.price
+        +b.SPAN.price__title Цена
+        +b.SPAN.price__current 570 Р
+        +b.SPAN.price__old 600 р
+      +e.cheap
+        +b.A.link_low-cost(href="#") Нашли дешевле?
+      +e.bay
+        +b.BUTTON.button_add
+          +b.I.picto_basket-picto
+          | В корзину
+
+mixin getModel2
+  +b.model
+    +e.wrap
+      +e.image
+        +b.IMG.image_fluid(src='/images/models/model1.jpg')
+        +b.A.button_quick-view(href="#")
+          +b.I.picto_quickview-picto
+          | Быстрый просмотр
+      +e.stocks
+        span.stock.stock_novelty Новинка
+        span.stock.stock_available В наличии
+
+      +e.title
+        +b.A.link_model(href="#") Cборная cауна <br>evolve ЕЛЬ
+      +e.descr
+        ul
+          li
+            span Наименование:
+            |  Е1212
+          li
+            span Размер, см:
+            |  118 х 118
+          li
+            span Рек. мощ. кВт:
+            | 4,5
+      +e.price.price
+        +b.SPAN.price__title Цена
+        +b.SPAN.price__current 570 Р
+        +b.SPAN.price__old 600 р
+      -//+e.cheap
+      -//  +b.A.link_low-cost(href="#") Нашли дешевле?
+      +e.bay
+        +b.BUTTON.button_add.button_add_red
+          +b.I.picto_basket-picto
+          | В корзину
+        +b.BUTTON.button_to-favourites
+          i.fa.fa-heart
+          | В избранное
+
+
+
+mixin getCategory
+  .category.category_mp.grid__cell
+    .category__title
+      +b.A.link_category(href="#") Оборудование для Хаммама
+    .category__image
+        +b.IMG.image_responsive(src='/images/categoryes/cat1.png')
+
+mixin getStatePreview
+  .preview
+    .preview__image.grid__cell.box_size-1-4-2
+      +b.IMG.image_responsive(src='/images/articles/state1.jpg')
+    .preview__info.grid__cell.box_size-3-4-2
+      +b.preview__title
+        +b.A.link(href="#") Как подобрать бассейн для дома учитывая все важные факторы
+      +b.preview__description
+        | Наличие бассейна в ваше доме или же на участке дачи или коттеджа горантирует приятное времярпривождение
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+mixin zakazform
+  .zakazblock.bounceInDown
+    i.sprite.icon-wclose
+    .z3 Заявка на аренду
+    form(action='/')
+      .form-group
+        input#toolName.inpt(type='text', readonly='readonly', value='Бетоносмеситель Prorab ECM 63')
+      .form-group.row
+        .col-xs-6
+          label(for="Name") Имя
+          input.inpt(type='text', id='Name')
+        .col-xs-6
+          label(for="Tel") Телефон
+          input.inpt(type='text', id='Tel')
+      .form-group.send
+        button.butn2.big2(type="submit") Отправить заявку
+        .note
+          span Мы свяжемся с вами в течении 10 минут

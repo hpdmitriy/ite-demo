@@ -1,0 +1,104 @@
+&_category
+  margin-left: 3.5em
+  position relative
+  display -webkit-flex
+  display flex
+  -webkit-flex-wrap wrap
+  flex-wrap wrap
+  padding 0
+  list-style none
+  margin-bottom: 1.5em
+  +mq-max-orient('md', landscape)
+    margin-left: 0
+  +mq-max-orient('md', portrait)
+    margin-bottom: 2em
+    margin-left: 0
+  +mq-max(sm)
+    margin-bottom: 1em
+  &__item
+    font-size: 0.8em
+    display block
+    position: relative;
+    margin 0 1% 0 0
+    &:last-child
+      margin-right:0
+    &:before, &:after
+      content: '';
+      position: absolute;
+      background: #312e39;
+      -webkit-transition: -webkit-transform 0.2s;
+      transition: transform 0.2s;
+      top: 0;
+      width 3px
+      +mq-max(lg)
+        width 2px
+      +mq-max(sm)
+        width 1px
+
+      height: 100%;
+      -webkit-transform: scale3d(1, 0, 1);
+      transform: scale3d(1, 0, 1);
+    &:before
+      left: 0;
+      -webkit-transform-origin: 50% 100%;
+      transform-origin: 50% 100%;
+    &:after
+      right: 0;
+      -webkit-transform-origin: 50% 0%;
+      transform-origin: 50% 0%;
+    &_current
+      &:before, &:after, .menu_category__link:before, .menu_category__link:after
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+        -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+      .menu_category__link
+        color: #312e39;
+
+
+  &__link
+
+    ff $medium
+    text-transform: uppercase
+    display block
+    padding 0.65em 1.3em
+    cursor pointer
+    user-select none
+    -webkit-touch-callout none
+    -webkit-tap-highlight-color rgba(0, 0, 0, 0)
+    position: relative;
+    text-align: center;
+    color: #312e39;
+    -webkit-transition: color 0.4s;
+    transition: color 0.4s;
+    text-decoration: none
+    &:before,&:after
+      content: '';
+      position: absolute;
+      background: #312e39;
+      -webkit-transition: -webkit-transform 0.2s;
+      transition: transform 0.2s;
+      left: 0;
+      width: 100%;
+      height 3px
+      -webkit-transform: scale3d(0, 1, 1);
+      transform: scale3d(0, 1, 1);
+      +mq-max(lg)
+        height 2px
+      +mq-max(sm)
+        height 1px
+    &:before
+      top: 0;
+      -webkit-transform-origin: 0 50%;
+      transform-origin: 0 50%;
+    &:after
+      bottom: 0;
+      -webkit-transform-origin: 100% 50%;
+      transform-origin: 100% 50%;
+    &:hover,&:focus
+      outline none
+      color: #312e39;
+    &:hover
+      text-shadow: 0 0 .65px #312e39, 0 0 .65px #312e39;

@@ -1,0 +1,97 @@
+/**
+*	CSS3 Grayscale Page styles
+*	@voronianski 
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: none;
+}
+
+body {
+	font-family: 'Chewy', Arial, Helvetica, sans-serif;
+	background: url(bg.png);
+}
+
+h1 {
+	font-size: 42px;
+	color: #333;
+	margin: 40px 0 0;
+	text-transform: uppercase;
+}
+
+a {
+	color: ff66cc;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	width: 480px;
+	text-align: left;
+	float: left;
+	margin: 15px 0;
+}
+
+.wrapper {
+	width: 760px;
+	margin: 30px auto;
+	text-align: center;
+} 
+
+.images {
+	width: 760px;
+	margin: 25px auto;
+}
+
+.code {
+}
+
+.box {
+	width: 376px;
+	height: 261px;
+	position: relative;
+	float: left;
+	margin: 0 2px;
+	overflow: hidden;
+}
+
+.box.animate:hover .details {
+	margin-left: 0px;
+}
+
+.details {
+	cursor: text;
+	color: #fff;
+	width: 326px;
+	height: 261px;
+	background-color: #000;
+	padding: 25px;
+	text-align: left;
+	opacity: 0.9;
+	filter:alpha(opacity=9);
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-left: -376px;
+	-webkit-transition: margin-left 250ms ease-in;
+	-moz-transition: margin-left 250ms ease-in;
+	-ms-transition: margin-left 250ms ease-in;
+	transition: margin-left 250ms ease-in;
+}
+
+pre, code {	
+	font-family: "Consolas", "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+}
+
+.social {
+	width: 90px;
+	float: left;
+	margin: 13px auto 0;
+}

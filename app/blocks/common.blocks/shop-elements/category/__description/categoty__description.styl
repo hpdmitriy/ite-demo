@@ -1,0 +1,38 @@
+&__description
+  lost-utility clearfix
+  padding-top: 15px
+  padding-bottom: 15px
+  font-size: responsive 16px 22px;
+  font-range: 320px 180px;
+  p
+    font-size: responsive 14px 22px;
+    font-range: 320px 1180px;
+  h1
+    margin-top: 0
+    color #495057
+    font-family $black
+    font-size: responsive 28px 48px;
+    font-range: 320px 1180px;
+    font-weight 900
+    lh 1.1
+    margin-bottom: 20px
+    text-transform: none
+  h2
+    margin-top: 40px
+    color #495057
+    font-family $black
+    font-size: responsive 18px 38px;
+    font-range: 320px 1180px;
+    font-weight 900
+    lh 1.1
+    margin-bottom: 20px
+    text-transform: none
+
+&__main-info
+  > *:nth-child(1)
+    +mq-min('sm')
+      lost-move 1/2
+  > *:nth-child(2)
+    +mq-min('sm')
+      lost-move -1/2
+

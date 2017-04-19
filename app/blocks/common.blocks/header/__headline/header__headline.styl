@@ -1,0 +1,42 @@
+&__headline
+  position: relative
+  overflow: hidden
+  &:before
+    display: block
+    content ''
+    position: absolute
+    bottom 0
+    left calc(50% + 42px)
+    right -85px
+    background: $wt
+    transform: skewX(-45deg);
+    height 85px
+    +mq-max('md')
+      height 70px
+      left calc(50% + 35px)
+      right -70px
+    +mq-max('sm')
+      height 40px
+      left calc(50% + 20px)
+      right -40px
+  &:after
+    display: block
+    content ''
+    position: absolute
+    bottom 0
+    right calc(50% + 42px)
+    left -85px
+    background: $wt
+    transform: skewX(45deg);
+    height 85px
+    +mq-max('md')
+      height 70px
+      right calc(50% + 35px)
+      left -70px
+    +mq-max('sm')
+      height 40px
+      right calc(50% + 20px)
+      left -40px
+
+/* TODO WP Woocommerce crutch products
+   ========================================================================== */

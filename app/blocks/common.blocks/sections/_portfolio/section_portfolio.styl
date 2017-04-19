@@ -1,0 +1,168 @@
+&_portfolio
+  opacity 0
+  &:not(.clients)
+    background $tr url($ipath 'dots2.png') 50% 0% repeat-y
+    background-size contain
+    position relative
+  .portfolio
+    &__desc
+      h2, .h2, span
+        font-family $medium
+      h2, .h2, p
+        font-size 1em !important
+        margin-bottom: 1em !important
+        text-transform: none !important
+        text-align: inherit
+    &__letter
+      lost-column 3/11 2 0
+      padding-top: 1.1em
+      padding-bottom: 1.1em
+      +mq-min-orient('xs', portrait)
+        padding-top: 0
+
+      h2, .h2, p
+        font-size 1.5em !important
+        margin-bottom: 1.5em !important
+        text-transform: none !important
+        text-align: inherit
+      h2, .h2, span
+        font-family $medium
+        display: none
+        +mq-min-orient('xs', portrait)
+          text-align: center
+          display: block
+          font-size 1em !important
+          margin-bottom: 1em !important
+          margin-top: 0 !important
+
+          br
+            display: none
+      img
+        display: inline-block !important
+        width auto !important
+        max-width 100%
+      +mq-min-orient('xs', portrait)
+        lost-column 1/1 2 0
+        text-align: center
+        img
+          display: inline-block !important
+          width 40% !important
+          max-width 40%
+
+    &__text
+      lost-column 8/11 2 0
+      padding-left 3em
+      +mq-max('md')
+        margin-bottom: 0 !important
+      +mq-min-orient('xs', portrait)
+        lost-column 1/1 2 0
+        padding-left: 0
+        h2, .h2
+          text-align: center
+          display: none
+        p
+          text-align: center
+    &__client
+      position: relative
+      text-align: center
+      margin 0
+      lost-waffle: 1/6 6 2px;
+
+      &:before
+        position: absolute auto 0 0 0
+        content ""
+        background $tr url($ipath 'dot.png') 0% 0% repeat-x
+        background-size auto 3px
+        display: block
+        height 3px
+        +mq-max('lg')
+          background-size auto 2px
+          height 2px
+        +mq-max('sm')
+          background-size auto 1px
+          height 1px
+
+      &:after
+        position: absolute 0 -2px 0 auto
+        content ""
+        background $tr url($ipath 'dot2.png') 0% 0% repeat-y
+        background-size 3px auto
+        display: block
+        width 3px
+        +mq-max('lg')
+          background-size 2px auto
+          width: 2px
+          right -2px
+        +mq-max('sm')
+          background-size 1px auto
+          right -1px
+          width  1px
+      +mq-min-orient('xs', landscape)
+        &:nth-child(6n)
+          &:after
+            display: none
+        &:nth-last-child(-n + 6)
+          &:before
+            display: none
+      img
+        height 5.5em
+        width auto
+        max-width none
+      +mq-min-orient('xs', portrait)
+        lost-waffle: 1/3 3 1px;
+        &:nth-child(3n)
+          &:after
+            display: none
+        &:nth-last-child(-n + 3)
+          &:before
+            display: none
+        img
+          height 5em
+          width auto
+          max-width none
+
+
+    &__slider
+      display: block
+      //padding 1.8em 5em
+
+    &__slide
+      lost-utility: clearfix;
+      padding-top: 1.2em
+      padding-bottom: 1.2em
+      padding-left: 5em
+      padding-right: 5em
+    &__logo
+      +mq-min-orient('xs', portrait)
+        display: none
+        margin-bottom: 1.5em
+      > img
+        display: inline-block
+        width auto !important
+        height 3.5em
+      //h2, .h2, strong
+      //  font-family $medium
+      //  text-transform: none
+      //h2, .h2, p
+      //  font-size: 1.2em;
+      //  margin-bottom: 1.5em
+      //  text-align: inherit
+      //a
+      //  //text-decoration: none
+      //> *:last-child
+      //  margin-bottom: 0
+      //+mq-max('md')
+      //  text-align: center
+      //  h2, .h2
+      //    display: none
+
+  .owl-nav
+    position: absolute 50% 0 auto 0
+    .slider__left, .slider__right
+      size 2.5em
+
+    .owl-next
+      position: absolute -1.3em 1em auto auto
+
+    .owl-prev
+      position: absolute -1.3em auto auto 1em

@@ -1,0 +1,28 @@
+&__more
+  position:absolute auto auto 20px 40px
+  z-index 10
+  display: inline-block
+  height 60px
+  width auto
+  padding-left: 50px
+  padding-right: 50px
+  line-height: 60px
+  font-size: responsive 14px 16px;
+  font-range: 320px 1280px;
+  font-family: $bold
+  font-weight: normal
+  text-transform: uppercase;
+  background-color $c3
+  > a
+    color $wt
+    text-decoration: none
+  &:before
+    transition: all 250ms ease-in-cubic;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 30px 0 30px 18px;
+    border-color: transparent transparent transparent $c3;
+    position absolute 0 auto 0 100%
+    content ""
+

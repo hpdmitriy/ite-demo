@@ -1,0 +1,54 @@
+.caption
+  display: block
+
+  &_third
+    padding: 0
+    color $mc
+    ff $bold
+    line-height 20px
+    font-size 16px
+    font-weight normal
+    text-transform uppercase
+  &_page
+    font-size: 3em
+    color: $mc
+    text-transform: uppercase
+    ff $light
+    line-height: 1.1
+    opacity 0
+    letter-spacing 0.05em
+
+    +mq-max-orient('md', portrait)
+      font-size: 3.1em
+      line-height 1.2
+      letter-spacing -0.05em
+    //+mq-max('sm')
+    //  font-size: responsive 26px 60px;
+    //  font-range: $breakpoints.xs $breakpoints.sm;
+  &_promo
+    margin-top: 0.5em
+    letter-spacing 0.05em
+    //+mq-max('md')
+    //  margin-top: 30px
+    +mq-max-orient('md', portrait)
+      margin-top: 1em
+
+    #spr
+
+      height 3em
+      +mq-max-orient('md', portrait)
+        height 9em
+
+      text
+        tspan
+          visibility hidden
+          opacity 0;
+        font-size: 2em;
+        font-family: $black
+        +mq-max-orient('md', portrait)
+          font-size: 2.3em;
+        +mq-max-orient('sm', portrait)
+          font-size: 2.8em;
+        //+mq-max('sm')
+        //  font-size: responsive 26px 50px;
+        //  font-range: $breakpoints.xs $breakpoints.sm;

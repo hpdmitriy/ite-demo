@@ -1,0 +1,42 @@
+&_main
+  .article_states, .article_media
+    padding-top: 10px;
+    padding-bottom: 10px;
+  .article_info
+    padding-top: 10px;
+    padding-bottom: 10px;
+    p
+      fs 14px
+    h3
+      @extend h3
+   &.article_info
+    padding-top: 10px;
+    padding-bottom: 10px;
+    p
+      fs 14px
+    h3
+      @extend h3
+  .link
+    color $lc2
+    &:hover
+      color: $lc1
+
+  .button
+    position: absolute 30px 0 auto auto
+    +mq-max('sm')
+      top 0
+
+  .h3
+    margin-bottom: 30px
+
+  > .article_info
+    +mq-max('md')
+      lost-utility: clearfix;
+      padding-top 60px !important
+      clear both !important
+      .button
+        top 75px
+
+  > .article_states, .article_media
+    +mq-max('md')
+      lost-column 1/2 2

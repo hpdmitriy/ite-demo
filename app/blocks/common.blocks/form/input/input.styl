@@ -1,0 +1,20 @@
+input-colors(bgc = $wt, col = $mc, bcl = lightness($mc 70))
+  color col
+  background-color bgc
+  border-color bcl
+  &:focus
+    box-shadow: 0px 0px 3px 1px bcl
+
+
+.input
+  display: block
+  width 100%
+  border-style solid
+  border-width  1px
+  border-radius 5px
+  line-height 1
+  padding 8px 15px
+  transition: all 250ms ease-in-cubic;
+  input-colors()
+  @import "_search/input_search"
+  @import "_text/input_text"

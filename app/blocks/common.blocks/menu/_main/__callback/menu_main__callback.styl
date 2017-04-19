@@ -1,0 +1,51 @@
+&__callback
+  padding-top: 0.6em
+  +mq-max('md')
+    position: relative
+    left: -8em
+    z-index: 200
+
+  +mq-max('sm')
+    padding-top: 0
+    left: -4em
+  > .link
+    display: inline-block
+    line-height: 0.8
+    ff $book
+    color: $wt
+    text-decoration: none
+    padding 0.4em 0.6em
+    //+mq-max('sm')
+    //  padding 13px 0 0 0
+    &_phone
+      background #e9e8e6
+      border-radius 5px
+      +mq-max('sm')
+        background transparent
+        &:focus
+          background transparent
+          color white
+
+      span
+        ff $medium
+        color #322f3a
+        letter-spacing -0.05em
+        font-size: 1em
+        +mq-min-max('md','lg')
+          letter-spacing -0.08em
+        +mq-max('sm')
+          display: none
+
+
+      > .fa
+        color #322f3a
+        margin-right: 10px
+        +mq-max('sm')
+          color #e9e8e6
+          font-size: 2.5em
+
+      &:hover
+        background $wt
+        +mq-max('sm')
+          &:focus, &:focus
+            background #322f3a

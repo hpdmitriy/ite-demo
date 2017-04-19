@@ -1,0 +1,49 @@
+&_label
+  background-color #e6e6e6
+  position: relative
+  .pattern
+    &__title
+      position: relative
+      background-color $c5
+      padding 0px 30px
+      color black
+      font-family $black
+      font-size 17px
+      text-transform uppercase
+      height: 80px
+      line-height 80px
+      +mq-max('sm')
+        height: 50px
+        line-height 50px
+        fs 14px
+      > a
+        font-family $black
+        display: inline-block
+        vertical-align: middle
+        line-height 1.2
+        //position: absolute;
+        //top:50
+        //transform: translateY(50%);
+        text-decoration: none
+        &:hover
+          color white
+    &__info
+      padding 20px 30px
+      +mq-max('md')
+        display: none
+      > ul
+        list-style none
+        margin: 0
+        padding: 0
+        > li
+          margin-bottom: 17px
+          > a
+            color black
+            font-family $book
+            font-size 16px
+            font-weight 400
+            transition all ease 0.3s
+            text-decoration: none
+            &:hover
+              text-shadow: 0 0 .65px #000, 0 0 .65px #000;
+              text-decoration: none

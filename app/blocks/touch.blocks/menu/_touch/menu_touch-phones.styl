@@ -1,0 +1,49 @@
+&_touch-phones
+  +mq-max('md')
+    lost-column 2/3 2 0
+  +mq-max('sm')
+    position: fixed !important;
+    float:none !important
+    z-index: 1001;
+    width: 300px !important;
+    right 0
+    top 0
+    bottom 0
+    background: #2d2d2d !important;
+    padding: 180px 40px 0;
+    transform: translate3d(320px,0,0);
+    transition: transform 0.4s;
+    transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+    .menu-item
+      color white
+      line-height: 1 !important
+      padding: 18px 0 !important
+      margin 0 !important
+      height auto !important
+      text-align: left !important
+      display: block !important
+      margin-bottom: 30px !important
+      > .link
+        font-size 26px !important
+  &.menu_open
+    +mq-max('md')
+      transform: translate3d(0,0,0);
+      transition: transform 0.4s;
+      transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+      .button_menu-open
+        left 0
+        > i
+          @extend .picto_close-menu-picto
+
+
+
+  .button_menu-open
+    display: none
+    +mq-max('sm')
+      size 50px
+      lh 50px
+      display: block
+      top:0
+      left -120px
+      position: absolute
+      bg $tr

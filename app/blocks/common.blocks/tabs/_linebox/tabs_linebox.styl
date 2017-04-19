@@ -1,0 +1,59 @@
+&_linebox
+  nav
+    ul
+      li
+        margin 0
+        position: relative
+        z-index 1
+        -webkit-flex none
+        flex none
+        border-right:solid 1px #dddddd
+        border-top:solid 1px #dddddd
+        background #ededed
+        &:first-child
+            border-left:solid 1px #dddddd
+        &.tabs__item_current
+          a
+            color black
+            &:after
+              top 0
+              border-color $c5
+    a
+      padding 0 20px
+      +mq-max('sm')
+        padding 0 7px
+      text-decoration: none
+      color black
+      fs 15px
+      transition all 0.3s ease-in-cubic
+      &:after
+        transition all 0.3s ease-in-cubic
+        position absolute
+        border-top: solid 5px #ededed
+        top 100%
+        left 0px
+        right 0px
+        bottom 0;
+        z-index -1
+        background $wt
+        margin-top: -5px
+        content ''
+      &:hover, &:focus
+        &:after
+          border-color $c5
+
+        //transition background-color 0.3s, transform 0.3s
+        //-webkit-transition-timing-function ease, cubic-bezier(0.7,0,0.3,1)
+        //transition-timing-function ease, cubic-bezier(0.7,0,0.3,1)
+        //-webkit-transform translate3d(0,100%,0) translate3d(0,-3px,0)
+        //transform translate3d(0,105%,0) translate3d(0,-3px,0)
+
+  +mg('sm')
+      nav
+        ul
+          display block
+          box-shadow none
+          li
+            display block
+            -webkit-flex none
+            flex none

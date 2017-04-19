@@ -1,0 +1,26 @@
+&__description
+  padding 60px
+  transition: all 250ms ease-in-cubic;
+  background-image linear-gradient(to right, #456dc8 0%, #dbb29c 100%)
+  position: absolute 0 0 auto 0
+  opacity 0
+  height 340px;
+  overflow hidden
+  +mq-max('md')
+    height 350px
+  +mq-max('sm')
+    height 290px
+  > span
+    line-height: 1.4
+    transition: all 400ms ease-in-cubic;
+    margin-left: -60px
+    display: block
+    color $wt
+    font-size 20px
+    opacity 0
+    ff $book
+line-height 30px
+  +mq-max('md')
+    height 350px
+  +mq-max('sm')
+    height 290px

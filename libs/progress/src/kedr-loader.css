@@ -1,0 +1,46 @@
+.body.loading {
+    overflow: hidden;
+}
+
+.body.loading > .page{
+    visibility: hidden;
+}
+.body.loading > footer{
+    visibility: hidden;
+}
+
+
+.progressjs-inner {
+    width: 0;
+}
+.progressjs-progress {
+    z-index: 9999999;
+}
+
+/* blue theme with overlay layer, no percent bar */
+.progressjs-theme-blueOverlay {
+    background: white url('logo.png') center center no-repeat;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+.progressjs-theme-blueOverlay .progressjs-inner {
+    height: 100%;
+    max-width: 320px;
+    position: absolute;
+    top:0;
+    left:50%;
+    margin-left: -160px;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    background-color: rgba(0,0,0,.3);
+}
+.progressjs-theme-blueOverlay.progressjs-end {
+    opacity: 0 !important;
+}
+.progressjs-theme-blueOverlay .progressjs-percent {
+    display: block;
+}

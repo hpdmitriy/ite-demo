@@ -1,0 +1,14 @@
+.nav
+  position: relative
+  @import "_main/nav_main"
+  @import "_category/nav_category"
+  //@import "_footer/nav_footer"
+  &.stuck
+    animation-name: slideInDown
+    animation-duration: 0.5s
+    animation-fill-mode: both
+    position fixed 0 0 auto 0
+    z-index 100
+    top 0
+
+

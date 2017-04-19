@@ -1,0 +1,34 @@
+&_subscribe
+  text-transform: uppercase
+  fs 12px
+  ff $bold
+  button-colors($c6,$wt,$c6)
+  &_angle
+    color $wt
+    font-family $bold
+    font-size 16px
+    text-transform: none
+    border-radius 0px
+    position: relative
+    height 50px
+    padding 0 50px 0 38px
+    white-space: nowrap
+    +mq-max('md')
+      padding 0 22px 0 10px
+    +mq-max('sm')
+      padding 0
+      width 80%
+    lh 50px
+    border none
+    &:hover
+     &:before
+       border-color: $tr darken($c6, 10) $tr $tr;
+    &:before
+      transition: all 250ms ease-in-cubic;
+      content ''
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 25px 12px 25px 12px;
+      border-color: $tr $c6 $tr $tr;
+      position: absolute 0px auto auto -24px

@@ -1,0 +1,71 @@
+.tabs
+  position relative
+  overflow hidden
+  width 100%
+  nav
+    text-align center
+    ul
+      position relative
+      display flex
+      margin 0 auto
+      padding 0
+      max-width 1280px
+      list-style none
+      -ms-box-orient horizontal
+      -ms-box-pack center
+      flex-flow row wrap
+      justify-content center
+      li
+        position relative
+        z-index 1
+        display block
+        margin 0
+        text-align center
+        flex 1
+    a
+      position relative
+      display block
+      text-overflow ellipsis
+      white-space nowrap
+      line-height 2.5
+      span
+        vertical-align middle
+        font-size 0.75em
+      &:focus
+        outline none
+    li
+      &.tabs__item_current
+
+          color #74777b
+  @import "_linebox/tabs_linebox.styl"
+  &__wrap
+    padding-top: 25px
+    padding-bottom: 25px
+  &__content
+    display: none
+    animation-duration: 1s
+    animation-fill-mode: both
+    animation-name: fadeIn
+    +mq-max('md')
+      .model
+        &:nth-child(1)
+          lost-column: 1/2 2 30px
+        &:nth-child(2)
+          lost-column: 1/2 2 30px
+        &:nth-child(3)
+          lost-column: 1/2 2 30px
+        &:nth-child(4)
+          lost-column: 1/2 2 30px
+    +mq-max('sm')
+      .model
+        &:nth-child(1)
+          lost-column: 1/2 2 10px
+        &:nth-child(2)
+          lost-column: 1/2 2 10px
+        &:nth-child(3)
+          display: none
+        &:nth-child(4)
+          display: none
+    &_current
+      display: block
+  @import "_serve/tabs_serve"

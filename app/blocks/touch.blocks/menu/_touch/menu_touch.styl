@@ -1,0 +1,52 @@
+&_touch
+  @import "__links/menu_touch__links"
+
+/*
++mq-max('md')
+    position: fixed !important;
+    float:none !important
+    z-index: 1001;
+    width: 300px !important;
+    right 0
+    top 0
+    bottom 0
+    background: #2d2d2d !important;
+    padding: 90px 50px;
+    transform: translate3d(320px,0,0);
+    transition: transform 0.4s;
+    transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+    .menu-item.box_block-md
+      color white
+      line-height: 1 !important
+      padding: 18px 0 !important
+      border-top: 1px solid #484848
+      margin 0 !important
+      height auto !important
+      &:last-child
+        border-bottom: 1px solid #484848
+      > .link
+        font-size 23px !important
+  &.menu_open
+    +mq-max('md')
+      transform: translate3d(0,0,0);
+      transition: transform 0.4s;
+      transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+      .button_menu-open
+        left 0
+        > i
+          @extend .picto_close-menu-picto
+*/
+
+
+  /*
+
+  .button_menu-open
+    display: none
+    +mq-max('md')
+      display: block
+      top:0
+      right -80px
+      position: absolute
+    +mq-max('sm')
+      size 50px
+      right -70px  */

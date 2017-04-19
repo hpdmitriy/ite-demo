@@ -1,0 +1,101 @@
+{
+  "root": {
+	"src" : "./app",
+	"dest": "./public",
+	"temp": "./tmp",
+	"rev" : "./manifest"
+  },
+  "components": {
+	"src": "/blocks/"
+  },
+  "tasks": {
+	"server": {
+	  "server": "public"
+	},
+	"static": {
+	  "src": "static",
+	  "dest": "./"
+	},
+	"js": {
+	  "src": "/scripts/",
+	  "dest": "/js/",
+      "common": "common.js"
+	},
+	"html": {
+	  "src": "/pages",
+	  "dest": "/"
+	},
+	"styles": {
+	  "src": "/styles",
+	  "tpl": "/tpl/",
+	  "dest": "/styles",
+      "common": "common.css"
+    },
+	"svg": {
+	  "sprite": {
+		"tempDir": "/tempsvg",
+		"src": "/blocks/",
+		"ico": "-ico.svg",
+		"tpl": "svg-sprite-tpl.hbs",
+		"inlineTpl": "svg-inline-tpl.hbs"
+	  }
+	},
+	"png": {
+	  "sprite": {
+		"tempDir": "/temppng",
+		"src": "/blocks/",
+		"ico": "-picto.png",
+		"tpl": "png-sprite-tpl.hbs"
+	  }
+	},
+	"images": {
+	  "src": "images",
+	  "dest": "/images/",
+	  "temp": "template/",
+	  "extensions": [
+		"jpg",
+		"png",
+		"svg",
+		"gif"
+	  ]
+	},
+	"resourses": {
+	  "src": "/resources/",
+	  "dest": "fonts",
+	  "extensions": [
+		"woff2",
+		"woff",
+		"eot",
+		"ttf",
+		"svg"
+	  ]
+	},
+	"favicons": {
+	  "src": "/resources/",
+	  "dest": "favicons",
+	  "extensions": "logo.png"
+	},
+	"iconFont": {
+	  "src": "icons",
+	  "dest": "fonts",
+	  "sassDest": "generated",
+	  "extensions": [
+		"woff2",
+		"woff",
+		"eot",
+		"ttf",
+		"svg"
+	  ]
+	},
+	"svgSprite": {
+	  "src": "icons",
+	  "dest": "images",
+	  "extensions": [
+		"svg"
+	  ]
+	},
+	"production": {
+	  "rev": true
+	}
+  }
+}

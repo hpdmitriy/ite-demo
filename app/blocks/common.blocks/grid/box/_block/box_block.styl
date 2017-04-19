@@ -1,0 +1,23 @@
+med =
+  display: block !important
+  width 100% !important
+  float: none !important
+  margin 0 0 30px 0 !important
+  clear fix
+  &:last-child
+    margin-bottom: 30px !important
+
+&_block
+  display: block
+  &-xs
+    +mq-max('xs')
+      {med}
+  &-sm
+    +mq-max('sm')
+      {med}
+  &-md
+    +mq-max('md')
+      {med}
+  &-lg
+    +mq-max('lg')
+      {med}

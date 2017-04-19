@@ -1,0 +1,92 @@
+&_content_map
+  .section__title_map
+    opacity 0
+    padding: 3.5em 0em 0 3.5em
+    min-height 23em
+    +mq-min-orient('xs',portrait)
+      min-height 24em
+    .section__title_stroke
+      width 23em
+      height 23em
+      +mq-min-orient('xs',portrait)
+        width 24em
+        height 24em
+      #quadrate
+          display: block !important
+
+    .contact
+      size 22.5em 16em
+      padding: 2em 1em 0 2em
+      background rgba(#fff,0.7) url($ipath 'dots2.png') 1px 1px repeat-y
+      +mq-min-orient('xs',portrait)
+        padding: 1.5em 0.5em 0 1.5em
+        size 25em 17em
+        h1
+          font-size: 1.5em !important
+          margin-bottom: 0.3em !important
+        h2
+          font-size: 1.1em !important
+      #iteMsk, #iteVrn
+        cursor: pointer
+      h1
+        margin-top: 0
+        margin-bottom: 0.6em
+        ff $medium;
+        font-size: 1.2em
+      h2
+        margin-top: 0
+        margin-bottom: 0
+        ff $medium;
+        font-size: 0.7em
+        text-transform: none
+      &__us
+        padding: 0
+        margin-bottom: 1.1em
+        br
+          display: none
+        .fa
+          font-size: 0.8em
+        .link
+          padding 0 0 0 0.8em
+          ff $medium;
+          text-decoration: none
+          font-size: 0.8em
+        +mq-min-orient('xs',portrait)
+          margin-bottom: 0.7em
+          font-size: 1.2em
+
+      &__loc
+        margin-bottom: 1em
+        &:last-child
+          margin-bottom: 0
+        p
+          font-size: 0.7em
+        +mq-min-orient('xs',portrait)
+          margin-bottom: 0.6em
+          p
+            margin-bottom: 0 !important
+            font-size: 1em
+    .section__map_buttons
+      position: absolute auto auto -3em 0
+      width 23em
+      text-align: right
+
+      +mq-min-orient('xs',portrait)
+        width 24em
+      .button_send
+        margin-left: 0.7em
+        font-size 1em
+        size 2em
+        line-height: 2em
+        padding: 0
+        text-align: center
+        .fa
+          display: inline
+          font-size: 1em
+
+      //+mq-max('md')
+      //  margin-top: 90px
+      //  text-align: right
+      //  padding-left: 0
+      //+mq-max('sm')
+      //  margin-top: 55px

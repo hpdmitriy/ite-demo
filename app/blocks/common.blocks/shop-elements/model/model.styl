@@ -1,0 +1,38 @@
+.model
+  &:not(.model_single)
+    margin-bottom: 30px
+    border solid 1px $brd
+    &:hover
+      box-shadow 0 5px 15px rgba(255, 185, 37, 0.32)
+      position: relative
+      .model__wrap
+        position: absolute 0 0 auto 0
+        //border solid 1px $brd
+        background white
+        box-shadow 0 5px 15px rgba(255, 185, 37, 0.32)
+
+
+
+  @import "__bay/model__bay"
+  @import "__cheap/model__cheap"
+  @import "__descr/model__descr"
+  @import "__image/model__image"
+  @import "__price/model__price"
+  @import "__title/model__title"
+  @import "__wrap/model__wrap"
+  @import "__stocks/model__stock"
+
+  @import "_single/model_single"
+  @import "__characteristic/model__characteristic"
+  @import "__gallery/model__gallery"
+  @import "__bay-set/model__bay-set"
+
+.shop-category__catalog
+  .model
+    &:hover
+      .model__wrap
+        position: relative
+
+.models_main
+  .model
+    lost-column: 1/4 4 30px;

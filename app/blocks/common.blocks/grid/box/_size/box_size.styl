@@ -1,0 +1,13 @@
+for $i in (1...13)
+  if $i>=1
+    for $x in (1...13)
+      if $x > $i
+        for $y in (1...13)
+          if $y <= $x
+            .box_size-{$i}-{$x}-{$y}
+              lost-column $i/$x $y 2.6%
+              /*
+              +mq-max('md')
+                lost-column $i/$x $y 20px
+              +mq-max('sm')
+                lost-column $i/$x $y 10px              */

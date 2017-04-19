@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CSS3 Grayscale filter</title>
+	<link href='http://fonts.googleapis.com/css?family=Chewy' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="grayscale.css">
+</head>
+<body>
+	<div class="wrapper">
+		<h1>CSS3 Grayscale filter: copy&paste!</h1>
+
+		<div class="images">
+			<div class="box animate">
+				<img src="example_alice.jpg" alt="example Alice Glass">
+				<div class="details"><pre>/* No styles */</pre></div>
+			</div>
+
+			<div class="box animate">
+				<img src="example_alice.jpg" alt="example Alice Glass" class="grayscale">
+				<div class="details">
+				<pre>.grayscale { 
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: url(grayscale.svg);
+  filter: gray; /* IE 6-9 */
+}
+				</pre>
+				</div>
+			</div>
+		</div>
+
+		<p>Support Chrome, Firefox 4+, Internet Explorer 6+, Safari 5.2+, Opera 13+ . <a href="http://labs.voroniasnki.com/css3-grayscale/grayscale.zip">Download ZIP (with .svg)</a>. <a href="http://pixelhunter.me/">Go to Pixelhunter</a>.</p>
+		<div class="social"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://labs.voronianski.com/css3-grayscale/" data-text="css3 grayscale filter!" data-via="voronianski" data-hashtags="css3">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+		<div class="social"><iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Flabs.voronianski.com%2Fcss3-grayscale%2F&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font=arial&amp;height=21&amp;appId=278153935531324" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe></div>
+	</div>
+
+</body>
+</html>

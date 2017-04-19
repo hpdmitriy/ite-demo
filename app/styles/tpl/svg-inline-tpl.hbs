@@ -1,0 +1,11 @@
+
+{{#svgs}}
+inline-{{{name}}}($size, $fill) {
+    background transparent url('{{{inline}}}') no-repeat 50% 50%
+    background-size contain
+    if $size {
+        width {{width}}
+        height {{height}}
+    }
+}
+{{/svgs}}
