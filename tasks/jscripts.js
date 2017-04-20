@@ -13,6 +13,22 @@ const pathToUrl = require('../lib/pathToUrl');
 const poststylus = require('poststylus')
 
 
+const eslintFormatter = (notifys) => errors => {
+	if (errors[0].messages) {
+		console.log(stylish(errors));
+		if (notifys) {
+			const error = errors[0].messages.find(msg => msg.severity === 2);
+			if (error) {
+				notifier.notifys({
+					title: error.message,
+					message: `${error.line}:${error.column} ${error.source.trim()}`,
+					icon: path.join(__dirname, 'tasks/images/error-icon.png')
+				});
+			}
+		}
+	}
+};
+
 
 const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == 'development';
 let paths = {
@@ -28,6 +44,12 @@ let startWebpack = function (callback) {
 			progress: config.root.src + config.tasks.js.src + 'progress',
 			//neuralMesh: config.root.src + config.tasks.js.src + 'neuralMesh'
 		},
+		stats: {
+			errorDetails: true,
+			colors: false,
+			modules: true,
+			reasons: true
+		},
 		output: {
 			path: paths.dest,
 			publicPath: config.tasks.js.dest,
@@ -41,7 +63,15 @@ let startWebpack = function (callback) {
 				'node_modules', 'bower_components', 'app', 'vendor', 'libs'
 			],
 			extensions: ['.js', '']
-		}, /**/
+		},
+
+		eslint: {
+			configFile: path.join(process.cwd(), '.eslintrc'),
+			emitErrors: false,
+			emitWarning: true,
+			formatter: eslintFormatter({notify: notify}),
+		},
+
 		module: {
 			loaders: [{
 				test: /\.js$/,
@@ -53,7 +83,7 @@ let startWebpack = function (callback) {
 				],
 				loader: 'babel?presets[]=es2015'
 			},
-				 {
+				{
 					test: /\.css$/,
 					loader: 'style!css-loader?importLoaders=1!csso-loader!autoprefixer?browsers=last 2 versions'
 				}, {
@@ -65,19 +95,36 @@ let startWebpack = function (callback) {
 					loader: 'style!css!?importLoaders=1!csso-loader!autoprefixer?browsers=last 2 versions!stylus?resolve url',
 					exclude: /node_modules/
 				}
+
 			],
 		},
-	/*	if (isDevelopment) {
-	 options.plugins.push(
-	 new webpack.HotModuleReplacementPlugin()
-	 );
-	 }*/
+
+		plugins: [
+			new webpack.NoErrorsPlugin(),
+			new webpack.ProvidePlugin({
+				$: "jquery/dist/jquery.js",
+				jQuery: "jquery/dist/jquery.js",
+				"window.jQuery": "jquery/dist/jquery.js"
+			}),
+			new webpack.DefinePlugin({
+				'process.env': {
+					'NODE_ENV': JSON.stringify('development')
+				}
+			}),
+
+		],
+
+	};
+	if (isDevelopment) {
+		options.plugins.push(
+			new webpack.HotModuleReplacementPlugin()
+		);
+	}
 	if (!isDevelopment) {
 		options.plugins.push(
 			new webpack.optimize.DedupePlugin(),
 			new webpack.optimize.UglifyJsPlugin({
 				compress: {
-					// don't show unreachable variables etc
 					warnings: false,
 					unsafe: true
 				},
@@ -101,10 +148,8 @@ let startWebpack = function (callback) {
 	}
 
 
-	// https://webpack.github.io/docs/node.js-api.html
 	webpack(options, function (err, stats) {
-		if (!err) { // no hard error
-			// try to get a soft error from stats
+		if (!err) {
 			err = stats.toJson().errors[0];
 		}
 
@@ -121,7 +166,6 @@ let startWebpack = function (callback) {
 			}));
 		}
 
-		// task never errs in watch mode, it waits and recompiles
 		if (!options.watch && err) {
 			callback(err);
 		} else {
